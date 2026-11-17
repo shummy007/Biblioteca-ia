@@ -20,4 +20,4 @@ En la sección **Releases** de este repositorio está el último APK.
 ## Compilación
 
 GitHub Actions compila el APK en cada cambio (`.github/workflows/compilar.yml`).
-Las versiones publicadas se crean con una etiqueta `v*`.
+Cada compilación exitosa en `main` se publica como versión nueva en Releases.
