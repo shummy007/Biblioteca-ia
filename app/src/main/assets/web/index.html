@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biblioteca IA</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+  <h1>Biblioteca IA</h1>
+  <span id="subtitulo">sin internet</span>
+</header>
+
+<main>
+  <!-- Primera vez: elegir carpeta -->
+  <section id="bienvenida" class="tarjeta" hidden>
+    <h2>Primeros pasos</h2>
+    <ol>
+      <li>En el pendrive, poné tus libros (PDF, EPUB o TXT) dentro de una carpeta, por ejemplo <b>BibliotecaIA</b>.</li>
+      <li>Conectá el pendrive al celular (con un adaptador OTG si hace falta).</li>
+      <li>Tocá el botón y elegí esa carpeta. Si no ves el pendrive, abrí el menú ☰ de la ventana.</li>
+    </ol>
+    <button id="btn-elegir">Elegir carpeta de libros</button>
+  </section>
+
+  <!-- Leyendo libros -->
+  <section id="progreso" class="tarjeta" hidden>
+    <h2>Leyendo los libros</h2>
+    <p id="progreso-texto">Buscando libros…</p>
+    <div class="barra"><div id="progreso-barra"></div></div>
+    <p class="aviso">Se hace una sola vez por libro. Dejá la pantalla prendida y el pendrive conectado.</p>
+  </section>
+
+  <section id="mensaje" class="tarjeta" hidden></section>
+
+  <!-- Buscador -->
+  <div id="zona-busqueda" hidden>
+    <form id="form">
+      <textarea id="pregunta" rows="1" placeholder="¿Qué necesitás saber? (ej: potabilizar agua)"></textarea>
+      <button type="submit">Buscar</button>
+    </form>
+    <section id="fuentes-caja" hidden>
+      <h2 id="fuentes-titulo">Resultados</h2>
+      <ol id="fuentes"></ol>
+    </section>
+  </div>
+
+  <div id="pie"></div>
+</main>
+
+<script src="buscador.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
